@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Parent Comp">
+`           <p>Parent Comp value {input}</p>
+        <lightning-input label="Parent Input Field"
+                         value={input}
+                         onchange={handleChange}>\
+        </lightning-input>
+
+        <lightning-button label="Send Data To child "
+                          variant="brand"
+                          onclick={handleClick}>
+
+        </lightning-button>
+
+        <p> child comp value :{parentVar}</p>
+
+    </lightning-card>
+
+    
+    <c-child-comp onchildata={handleChild} child-param={input}></c-child-comp>
+   
+</template>

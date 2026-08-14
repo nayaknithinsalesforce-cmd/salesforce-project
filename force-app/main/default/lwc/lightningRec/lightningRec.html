@@ -1,0 +1,30 @@
+<template>
+
+    <lightning-card title="Create Contact Record">
+
+            <lightning-record-edit-form
+                    object-api-name="Contact"
+                    record-id={recordId}
+                    onsubmit={handleSubmit}
+                    onsuccess={handleSuccess}
+                    onerror={handleError}>
+
+                    <lightning-input-field field-name='LastName'></lightning-input-field>
+                    <lightning-input-field field-name="Email"></lightning-input-field>
+                    <lightning-button type="submit" label="Save" onclick={saveRecord}></lightning-button>
+                    <lightning-button label="Generate URL" variant="destructive" onclick={generateLink}></lightning-button>
+                    <lightning-button label="Show Notification" onclick={showToast}></lightning-button>
+
+                    <lightning-combobox label="Country"
+                                        data={value}
+                                        options={option}>
+                    </lightning-combobox>
+                    
+            </lightning-record-edit-form>
+
+    </lightning-card>
+    
+    
+
+    
+</template>

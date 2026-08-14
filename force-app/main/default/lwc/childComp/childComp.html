@@ -1,0 +1,24 @@
+<template>
+
+    <lightning-card title="Child Comp">
+
+        <p>parent shared value {childParam}</p>
+        <lightning-input label="Enter the Child Value"
+                         value={childVar}
+                         onchange={handleChange}>
+        </lightning-input>
+
+        <p>Child Comp Value {childVar}</p>
+
+        <lightning-button label="Send Child comp data To Parent comp"
+                          variant="brand"
+                          onclick={handleClick}>
+        </lightning-button>
+
+    </lightning-card>
+
+    <p>{childMethodParam1}</p>
+    <p>{childMethodParam2}</p>
+    
+   
+</template>

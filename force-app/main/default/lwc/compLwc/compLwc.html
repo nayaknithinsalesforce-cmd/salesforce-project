@@ -1,0 +1,39 @@
+<template>
+
+    <!--
+
+    <template for:each={AccountsList} for:item="acc">
+        <lightning-card key={acc.Id} title={acc.Name}>
+            <p>Account Id : {acc.Id}</p>
+            <p>Account Name : {acc.Name}</p>
+            <p>AnnualRevenue : {acc.AnnualRevenue}</p>
+            <p>BillingAddress : {acc.BillingAddress}</p>
+            <p>Industry : {acc.Industry}</p>
+        </lightning-card>
+    </template>
+
+    -->
+
+    <lightning-input label="Search Bar"
+                     placeholder="Enter Account Name To Get The Details" 
+                     value={name}
+                     onchange={handleChange}>
+    </lightning-input>
+
+    <lightning-button lable="Search"
+                      variant="brand"
+                      onclick={handleClick}
+                      size="medium">
+    </lightning-button>
+
+    <template for:each={AccountsList} for:item="acc">
+        <lightning-card key={acc.Id}>
+                <p>Account Id : {acc.Id}</p>
+                <p>Account Name : {acc.Name}</p>
+                <p>Account AnnualRevenue : {acc.AnnualRevenue}</p>
+                <p>Account Industry : {acc.Industry}</p>  
+        </lightning-card>
+
+    </template>
+    
+</template>

@@ -1,0 +1,22 @@
+<template>
+
+    <lightning-card>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_2-of-3">
+
+                <lightning-card title="New Account ">
+
+                    <lightning-input label="Enter Name" onchange={handleName}></lightning-input>
+                    <lightning-input label="Enter Phone" onchange={handlePhone}></lightning-input>
+                    <lightning-button label="Create" onclick={handleClick}></lightning-button>
+
+                </lightning-card>
+
+            </div>
+            <div class="slds-col slds-size_1-of-3">
+                <!-- More lightning-output-field components here -->
+            </div>
+        </div>
+    </lightning-card>
+    
+</template>

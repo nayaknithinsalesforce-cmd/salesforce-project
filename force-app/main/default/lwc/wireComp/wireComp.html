@@ -1,0 +1,12 @@
+<template>
+    <p>Top 5 Accounts</p>
+
+    <template for:each={listOfAccounts} for:item="acc">
+        <lightning-card title={acc.Name} key={acc.Id}>
+            <p>{acc.Name} </p>
+            <p> {acc.AnnualRevenue}</p>
+        </lightning-card>
+    </template>
+   
+    
+</template>
