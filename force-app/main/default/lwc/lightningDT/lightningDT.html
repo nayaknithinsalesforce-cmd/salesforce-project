@@ -1,13 +1,14 @@
 <template>
 
-    <lightning-datatable
-       label="Related Contacts"
-       key-field="Id"
-       data={dataList}
-       columns={columnArray} 
-       onrowaction={handleRowAction} >
-    </lightning-datatable>   
-
+    <lightning-card title="Lightning Data Table">
+        <lightning-datatable
+            label="Related Contacts"
+            key-field="Id"
+            data={dataList}
+            columns={columnArray} 
+            onrowaction={handleRowAction} >
+        </lightning-datatable>   
+    </lightning-card>
    
     
 </template>
